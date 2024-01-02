@@ -1,0 +1,7 @@
+.backgroundContainer {
+  background-image: url("/path/to/your/image.jpg"); /* Replace with your actual image path */
+  background-size: 25% auto; /* Set the background size to cover 25% of the width and maintain the aspect ratio */
+  background-position: center; /* Center the background image */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  width: 100%; /* Set the width to 100% of the parent container */
+}
