@@ -107,7 +107,7 @@ const TodoContainer = () => {
                 todos.map((todo) => (
                   <div
                     key={todo.id}
-                    className="flex flex-row h-10 border-2 border-gray-400 items-center rounded-xl m-2 p-2 group"
+                    className="flex flex-row h-10 border-2 border-black items-center rounded-xl m-2 p-2 group"
                   >
                     <input
                       type="checkbox"
@@ -167,16 +167,16 @@ const TodoContainer = () => {
             <div className="flex items-center justify-center mb-2">
               <input
                 type="text"
-                className="border-2 border-gray-400 rounded-md p-1 w-[310px] text-gray-400 bg-transparent ml-1"
+                className="border-2 border-black rounded-md p-1 w-[310px] text-black bg-transparent ml-1"
                 placeholder="Enter a todo"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
               <button
-                className={`border-2  m-1 rounded-lg p-1 text-gray-400  px-6 active:translate-y-2 transition-all ml-3 ${
+                className={`border-2  m-1 rounded-lg p-1 text-black  px-6 active:translate-y-2 transition-all ml-3 border-black ${
                   text === ""
-                    ? "border-gray-400 bg-transparent"
-                    : "bg-[#869cfe] text-white border-white"
+                    ? "border-black bg-transparent"
+                    : "bg-[#aebdff] text-white "
                 }`}
                 onClick={() => addTodo()}
               >
@@ -193,13 +193,13 @@ const TodoContainer = () => {
                     alt=""
                     className="h-40 overflow-hidden "
                   />
-                  <p className="text-gray-500">There are no todos</p>
+                  <p className="text-black">There are no todos</p>
                 </div>
               ) : (
                 todos.map((todo) => (
                   <div
                     key={todo.id}
-                    className="flex flex-row h-10 border-2 border-gray-400 items-center rounded-xl m-2 p-2 group"
+                    className="flex flex-row h-10 border-2 border-black items-center rounded-xl m-2 p-2 group"
                   >
                     <input
                       type="checkbox"
@@ -220,14 +220,14 @@ const TodoContainer = () => {
                         );
                       }}
                     />
-                    <p className="text-gray-400 m-2 w-[200px] p-1 rounded-lg flex-grow">
+                    <p className="text-black m-2 w-[200px] p-1 rounded-lg flex-grow">
                       {todo.text}
                     </p>
                     <button
                       onClick={() => deleteCurrentTodo(todo.id)}
                       className="opacity-0 group-hover:opacity-100 transition-opacity"
                     >
-                      <IoIosCloseCircleOutline className="text-gray-400 font-bold text-2xl" />
+                      <IoIosCloseCircleOutline className="text-black font-bold text-2xl" />
                     </button>
                   </div>
                 ))
@@ -239,7 +239,7 @@ const TodoContainer = () => {
             alt=""
             className="bg-white absolute h-3/4 w-screen bottom-0 z-[-1] border-none"
           ></div>
-          <ToastContainer theme="dark" />
+          <ToastContainer theme="light" />
         </div>
       )}
     </>
